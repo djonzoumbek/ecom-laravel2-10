@@ -25,5 +25,6 @@
                 <button type="submit" class="btn btn-primary">Proceed to Payment</button>
             </form>
         </section>
+
     </main>
 @endsection
