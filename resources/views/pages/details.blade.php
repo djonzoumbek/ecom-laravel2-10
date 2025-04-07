@@ -1,0 +1,26 @@
+@extends('layouts.default')
+@section('title', 'Ecom - Home')
+
+@section('content')
+    <main class="container" style="max-width: 900px">
+        <section>
+            <img src="{{ $product -> image  }}" width="100%" alt="">
+            @if(session() ->has("success"))
+                <div class="alert alert-success">
+                    {{session()->get("success")}}
+                </div>
+            @endif
+
+            @if(session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+            <h1>{{ $product->title }}</h1>
+            <h3>{{ $product -> price }}</h3>
+            <p>{{ $product->description }}</p>
+
+            <a href="{{ route('cart.add', $product->id) }}" class="btn btn-success"> Add to cart</a>
+        </section>
+    </main>
+@endsection
