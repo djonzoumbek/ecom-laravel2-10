@@ -5,7 +5,7 @@
     <main class="container" style="max-width: 900px">
         <section>
             <h2>Check out</h2>
-            <form action="" method="post">
+            <form action="{{ route('checkout.post') }}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label for="address" class="form-label">Address</label>

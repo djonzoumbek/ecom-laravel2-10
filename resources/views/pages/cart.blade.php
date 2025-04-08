@@ -27,6 +27,11 @@
             <div>
                 {{ $cartItems -> links() }}
             </div>
+            <div>
+                <a href="{{ route('checkout.show') }}" class="btn btn-success">
+                    Check out
+                </a>
+            </div>
         </section>
     </main>
 @endsection
